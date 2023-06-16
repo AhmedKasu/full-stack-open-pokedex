@@ -52,7 +52,7 @@ jobs:
         with:
           severity: info
           text: A new version of Pokedex deployed
-          details: to to ${{ inputs.deploy_target }} by @${{ github.actor }}
+          details: to https://ahmed-kasu-full-stack-pokedex.fly.dev/ by @${{ github.actor }}
           footer: 'Severity: Informational'
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
 
