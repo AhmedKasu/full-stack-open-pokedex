@@ -31,7 +31,7 @@ jobs:
         with:
           severity: error
           text: Buid Failed!
-          details: commit ${{github.event.head_commit.url}} by ${{github.event.pusher.name }} broke the build
+          details: commit ${{github.event.head_commit.url}} by ${{github.actor }} broke the build
           footer: 'Severity: Error'
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
 
@@ -50,7 +50,7 @@ jobs:
         with:
           severity: info
           text: A new version of Pokedex deployed
-          details: to <a href="https://ahmed-kasu-full-stack-pokedex.fly.dev/">https://ahmed-kasu-full-stack-pokedex.fly.dev/</a> by ${{github.event.pusher.name }}
+          details: to to ${{ inputs.deploy_target }} by @${{ github.actor }}
           footer: 'Severity: Informational'
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
 
